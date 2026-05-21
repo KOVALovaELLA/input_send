@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мир интегралов</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span>∫</span>
+        <div>
+          <h1>Интегралы</h1>
+          <p>красиво и доступно</p>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#overview">Обзор</a>
+        <a href="#examples">Примеры</a>
+        <a href="#applications">Применения</a>
+        <a href="#contact">Контакт</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div>
+          <p class="eyebrow">Математика в деталях</p>
+          <h2>Погрузитесь в увлекательный мир интегралов</h2>
+          <p>Узнайте, как интегралы связывают площадь, накопление и движение.</p>
+          <div class="hero-buttons">
+            <a class="button primary" href="#tabs">Начать</a>
+            <a class="button ghost" href="#applications">Где применяются</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card__accent"></div>
+          <h3>Интеграл от функции</h3>
+          <p>∫ f(x) dx — это сумма бесконечно малых участков под графиком.</p>
+          <div class="hero-info">
+            <span>Область</span>
+            <strong>Площадь</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tabs" class="tabs-section container">
+      <div class="tabs-header">
+        <h2>Разделы</h2>
+        <p>Выберите тему, чтобы увидеть основное и примеры.</p>
+      </div>
+      <div class="tabs-nav" role="tablist" aria-label="Секции об интеграле">
+        <button class="tab-button active" data-tab="overview">Что такое интеграл</button>
+        <button class="tab-button" data-tab="examples">Графики и примеры</button>
+        <button class="tab-button" data-tab="applications">Применения</button>
+      </div>
+      <div class="tabs-panel">
+        <article id="overview" class="tab-content active">
+          <h3>Что такое интеграл?</h3>
+          <p>Интеграл помогает вычислить площадь под кривой, накопленное изменение и обобщает сумму бесконечно малых величин. Он играет ключевую роль в анализе и физике.</p>
+          <ul>
+            <li><strong>Неопределённый интеграл</strong> — семейство первообразных: F(x) + C.</li>
+            <li><strong>Определённый интеграл</strong> — значение площади между двумя точками: ∫<sub>a</sub><sup>b</sup> f(x) dx.</li>
+            <li><strong>Фундаментальная теорема анализа</strong> связывает интегрирование и дифференцирование.</li>
+          </ul>
+        </article>
+
+        <article id="examples" class="tab-content">
+          <h3>Графики и примеры</h3>
+          <p>Как работать с простыми функциями? Смотри примеры и представления.</p>
+          <div class="cards-grid">
+            <div class="info-card">
+              <h4>Пример 1</h4>
+              <p>∫ x dx = x² / 2 + C — это квадратная кривая и её первообразная.</p>
+            </div>
+            <div class="info-card">
+              <h4>Пример 2</h4>
+              <p>∫ sin x dx = −cos x + C — показывает связь тригонометрии и интегралов.</p>
+            </div>
+            <div class="info-card">
+              <h4>Пример 3</h4>
+              <p>∫<sub>0</sub><sup>1</sup> eˣ dx = e − 1 — определённый интеграл от экспоненты.</p>
+            </div>
+          </div>
+        </article>
+
+        <article id="applications" class="tab-content">
+          <h3>Применения</h3>
+          <p>Интегралы используются для решения практических задач в науке, технике и финансовом моделировании.</p>
+          <div class="applications-grid">
+            <div class="application-card">
+              <h4>Физика</h4>
+              <p>Вычисление работы, энергии и перемещения при переменной силе.</p>
+            </div>
+            <div class="application-card">
+              <h4>Геометрия</h4>
+              <p>Площадь фигур, объёмы тел вращения и длины кривых.</p>
+            </div>
+            <div class="application-card">
+              <h4>Статистика</h4>
+              <p>Плотности распределения и вероятности через интегральные функции.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow">Связаться</p>
+          <h2>Оставьте свои данные</h2>
+          <p>Инициалы, email и комментарий сохраняются в защищённой базе данных проекта. Другие пользователи не видят ваши записи.</p>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+          <div class="form-field">
+            <label for="name">Инициалы</label>
+            <input id="name" name="name" type="text" placeholder="Иван И." required />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="ivan@example.com" required />
+          </div>
+          <div class="form-field">
+            <label for="comment">Комментарий</label>
+            <textarea id="comment" name="comment" rows="5" placeholder="Ваш комментарий..." required></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="button primary">Отправить</button>
+            <div class="form-note" id="formNote">Ваше сообщение будет сохранено.</div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Создано для вдохновения и изучения интегралов.</p>
+      <button id="adminToggle" class="admin-toggle" title="Панель администратора">⚙️</button>
+      <span>© 2026 Интеграл</span>
+    </div>
+  </footer>
+
+  <div id="adminModal" class="modal hidden">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content">
+      <button id="closeModal" class="modal-close">✕</button>
+      <div id="loginForm" class="admin-login">
+        <h3>Вход администратора</h3>
+        <input id="adminLogin" type="text" placeholder="Логин" />
+        <input id="adminPassword" type="password" placeholder="Пароль" />
+        <button id="loginButton" class="button primary">Войти</button>
+        <div id="loginError" class="error-message"></div>
+      </div>
+      <div id="adminPanel" class="admin-panel hidden">
+        <h3>Контакты посетителей</h3>
+        <div class="admin-actions">
+          <button id="logoutButton" class="button secondary">Выйти</button>
+          <button id="downloadExcelButton" class="button primary">Скачать Excel</button>
+        </div>
+        <table id="submissionsTable" class="submissions-table">
+          <thead>
+            <tr>
+              <th>Инициалы</th>
+              <th>Email</th>
+              <th>Комментарий</th>
+              <th>Дата</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
